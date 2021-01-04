@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 作用域链 : 按照作用域嵌套关系,一层一层向上查找的轨迹
+
+//分析
+
+
+function  f1 () {
+    num = 123;
+    function f2 () {
+        var  num = 789;
+        console.log("内:", num );
+    }
+    f2 ();
+} 
+
+var  num = 456;
+
+f1();
+
+console.log("外",num);
+
+
+
+
+// 作用域嵌套在一起
+
+// var num = 1;
+
+function fn1(){
+
+    // var num = 2
+
+    // console.log("i am  fn1");
+
+    function fn2(){
+
+        // var num = 3;
+        // console.log("我是fn2");
+        console.log("num: ",num);
+
+    }
+
+    fn2()
+}
+
+
+fn1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            // 块级作用域
+        }
+
+
+
+// 全局作用域
+
+var a = 1;
+b = 2;//全局变量
+
+// 局部作用域  func(){}
+// 被 var关键字 修饰的 变量  受作用域限制
+
+
+
+// ES5  没有作用域的明确概念
+
+for(var i = 0 ; i<5 ;i++){
+    console.log(i);
+    // if(){
+    //     for(){}
+    // }
+}
+
+console.log("for以外的i是: " + i);
+
+/*形参 : 形式参数*/
+function fn(num){
+    // 作用域
+
+    var num1 = 123;
+    num2 = 456;
+
+}
+
+/*实参: 实际参数*/
+
+
+// 作用域 : 起作用的区域
+fn(666)
+
+// console.log(num1,num2);
+    </script>
+</body>
+</html>

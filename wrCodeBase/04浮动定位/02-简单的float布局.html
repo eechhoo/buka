@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box   {
+        width: 500px;
+        height: 800px;
+        /* background-color: red; */
+        margin: 0 auto;
+    }
+
+    .box .top,
+    .box .bottom{
+        width: 100%;
+        height: 100px;
+        background-color: blue;
+    }
+
+    .box .main {
+        /* height: 600px; */
+        /* width: 100%; */
+        background-color: pink;
+        /* overflow: hidden;  BFC */
+    }
+
+    .box .main .left {
+        width: 200px;
+        height: 800px;
+        background-color: yellow;
+        float: left;
+    }
+
+
+
+    .box .main .right {
+        width: 300px;
+        height: 600px;
+        background-color: green;
+        float: right;
+    }
+
+    /* 清楚浮动 */
+    .clearfix::before,
+    .clearfix::after {
+        display: block;
+        content: "";
+        height: 0;
+        line-height: 0;
+        visibility: hidden;/*隐藏*/
+        clear: both;
+    }
+
+    .clearfix{
+        zoom:1; /*只有ie认识它*/
+    }
+</style>
+<body>
+    <!-- float带来的 不利影响 : 清楚浮动 -> clear:both; -->
+    
+    <div class="box">
+        <div class="top"></div>
+        <div class="main clearfix">
+            <div class="left"></div>
+            <div class="right"></div>
+            <!-- <div style="clear: both;"></div> -->
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    /*  帮助理解： 
+    
+     默认效果     标签名    class     id     important 
+       0           1        10      100        1000
+     
+    */
+
+    body {
+        font-size: 30px;
+        color: green;
+    }
+
+    /* 相同屬性 作用在同一元素 写在后面的生效*/
+
+
+    /* div div div div div div div div div div div div div {}
+
+    .box{} */
+
+    div.box{
+        width: 100px !important;
+        height: 100px;
+        background-color: pink;
+    }
+
+
+    div#b-id {
+        width: 300px;
+        height: 300px;
+    }
+
+    h1{
+        /* font-size: 30px; */
+    }
+
+    a {
+       
+    }
+</style>
+<body>
+    
+    <div class="box" id="b-id"></div>
+
+    <h1>我是一个大标题</h1>
+    <p>我是普通文字</p>
+
+    <a href="#">我是超链接</a>
+</body>
+</html>

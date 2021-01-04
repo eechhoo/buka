@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 1. 判断一个年份是闰年还是平年,闰年：能被4整除，但不能被100整除的年份 或者 能被400整除的年份
+
+
+    // var year;
+    // year = prompt("请输入年份：");
+    // if (year%4==0 && year%100!=0 && year%400!=0) {
+    //     console.log("是闰年");
+    // } else {
+    //     console.log("不是闰年");
+    // }
+
+    // 2. 依据一个人的年龄判断是否成年（大于18岁）
+
+
+    // var age = prompt("请输入年龄：");
+    // if (age > 18) {
+    //     console.log("成年了");
+    // } if(age < 0){
+    //     console.log("输入错误");
+    // }else {
+    //     console.log("未成年");
+    // }
+
+
+    // 3. 一个加油站为了鼓励车主多加油，所以加的多有优惠。
+    //      92号汽油，每升6元；如果大于20升，那么超出部分每升5.9；
+    //      95号汽油，每升7元；如果大于30升，那么超出部分每升6.95
+    //      编写JS程序，用户输入自己的汽油编号，然后输入自己加多少升，弹出价格。
+
+    // var oil92 = 92;  //92号汽油
+    // var oil95 = 95;  //95号汽油
+    // var uoil = prompt("请输入汽油编号：");   //用户输入汽油编号
+    // var v = prompt("要加多多少升：");        //用户输入加多少升
+
+    // if  ( uoil == oil92 && v <= 20) {
+    //     console.log("价格：",6*v);
+    // }else if ( uoil == oil92 && v > 20){
+    //     console.log("价格：",6*20 + (v-20)*5.9);
+    // }else if ( uoil == oil95 && v <= 30) {
+    //     console.log("价格：",7*v);
+    // }else if ( uoil == oil95 && v > 30) {
+    //     console.log("价格：",7*30+(v-30)*6.95);
+    // }else{
+    //     console.log("输入错误");
+    // }
+
+
+
+
+    // 3. 一个加油站为了鼓励车主多加油，所以加的多有优惠。
+    //      92号汽油，每升6元；如果大于20升，那么超出部分每升5.9；
+    //      95号汽油，每升7元；如果大于30升，那么超出部分每升6.95
+    //      编写JS程序，用户输入自己的汽油编号，然后输入自己加多少升，弹出价格。
+
+    // var oil92 = 92;  //92号汽油
+    // var oil95 = 95;  //95号汽油
+    // var uoil = prompt("请输入汽油编号：");  
+    // var v = prompt("要加多多少升：");   
+
+    // uoil == oil92 ? ( v <= 20 ? console.log("价格：",6*v) : console.log("价格：",6*20 + (v-20)*5.9) ) : ( v <= 30 ? console.log("价格：",7*v) : console.log("价格：",7*30 + (v-30)*6.95 ) );
+
+
+    // 4. 收先接收用户输入的用户名，判断该用户名是否是admin,如果不是直接程序终止，
+    //    如果是那么再次提示让用户输入密码,如果密码是88888,那么提示登录成功，否则提示登录失败。
+
+    // var username = prompt("请输入用户名：");
+    // var admin = "admin";
+    
+    // switch ( username ) {
+    // case admin:
+    //     var password = parseInt( prompt("请输入密码:"));
+    // 	break;
+    // default:   
+   	// 	break;
+    // }
+
+    // switch ( password ) {
+    // case 88888:
+    //     alert("登陆成功");
+    // 	break;
+    // default:   
+    //     alert("登陆失败");
+   	// 	break;
+    // }
+
+    // if(username = "admin"){
+    //     var password = prompt("请输入密码：");
+    // }else{
+
+    // }
+    // console.log(password);
+    // if (password = 88888) {
+    //     alert("登陆成功");
+    // } else {
+    //     alert("登陆失败");
+    // }
+
+
+
+
+    // 4. 收先接收用户输入的用户名，判断该用户名是否是admin,如果不是直接程序终止，
+    //    如果是那么再次提示让用户输入密码,如果密码是88888,那么提示登录成功，否则提示登录失败。
+
+    // var username = prompt("请输入用户名：");
+    // var password = prompt("请输入密码:");
+    // username == "admin"   ?  ( password == "88888" ?  alert("登陆成功")  :  alert("登陆失败")   )  :  alert("用户名不存在")  ;
+
+    </script>
+</body>
+</html>

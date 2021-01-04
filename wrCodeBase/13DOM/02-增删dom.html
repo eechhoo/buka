@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="box" id="box">box
+        <p>
+            <span>
+                <a href="">aaaa</a>
+            </span>
+        </p>
+    </div>
+    
+
+    <script>
+
+        var div = document.createElement("div");
+
+        var box= document.getElementById("box");
+
+        console.log(div);
+
+        // document.body.appendChild(div);
+        document.body.insertBefore(div,null);
+
+
+        // div.innerText = "我是一个<br>div";
+        div.innerHTML = "我是一个<br>div";
+
+
+        document.body.removeChild(div);
+
+        // 自杀
+
+        // div.parentNode.removeChild(div);
+
+        //克隆
+        // ()为空  默认 false 表面克隆
+        // (true)   深度克隆
+
+
+
+        // console.log(        );
+
+        document.body.appendChild(box.cloneNode(true))
+
+
+        console.log(box.getAttribute("class"));
+
+        box.setAttribute("onclick","fn()");
+
+        box.removeAttribute("class");
+
+        // 延伸
+
+        //. 方式 和 api 方式 ?  能不能混合使用?  不能
+
+        box.abc = "abc";
+        box.setAttribute("def","def");
+
+
+        console.log("abc:" , box.getAttribute("abc"));
+        console.log("def:" , box.def);
+    </script>
+</body>
+</html>

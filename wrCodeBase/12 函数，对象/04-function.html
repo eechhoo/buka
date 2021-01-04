@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // ☞ 求圆的面积   PI * r * r   
+
+    function getMJ(r){
+
+        console.log( Math.PI * r * r);
+    }
+
+
+    // getMJ(6);
+
+    // ☞ 求 n 到 m 之间的数字之和
+
+    function getSum(n,m){
+
+        console.log("arguments:" , arguments);
+
+        var sum = 0;
+        for(var i = n ; i<= m ; i++){
+            sum += i;
+        }
+
+        return sum;
+    }
+
+    console.log(getSum(1,5,6,7,8,9));
+
+    // ☞ 求3个数中的最大值  
+
+    // ☞ 判断一个数是奇数还是偶数
+
+
+
+
+
+
+
+
+
+
+        // 创建函数的方法
+
+        // var fn = new Function("alert(666)");
+
+        // fn();
+
+        // 匿名函数
+
+        var fn2 = function(){
+            console.log("我是 fn2");
+        }
+
+        // fn2();
+
+        // 匿名函数自调用
+        // 函数的名字 , 代表整个函数体代码
+
+        console.log("fn2",fn2);
+
+
+        (function(){
+            console.log("我是一个没有名字的函数");
+        })()
+
+
+
+
+
+        // 将比较两个数字大小封装到一个函数中
+
+        var a = 1;
+
+        function bj(num1,num2){
+
+            console.log("a:" + a);
+
+            return  num1>num2 ? num1 : (num1 == num2 ?  "他俩一样大" : num2);
+        }
+
+
+        var res = bj(666,666);
+        console.log(res);
+
+
+
+
+        // function 方法名(参数){ return }
+
+        function fn(num1,num2,num3){
+
+            // function fn2(){}
+            // 不执行
+
+
+            // if(num3 == 999){
+            //     // 停止函数
+            //     return "停止了";
+            // }
+
+
+            console.log(num1,num2,num3);
+
+            // 返回值 , 返回到 调用函数的位置
+
+            return "hi";
+        }
+
+
+        // 调用执行
+        var res = fn(123,456,999);
+
+        console.log(res);
+
+    </script>
+</body>
+</html>

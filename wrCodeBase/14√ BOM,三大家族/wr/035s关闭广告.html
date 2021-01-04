@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .banner{
+        width: 100%;
+        height: 200px;
+        background-color: pink;
+    }
+    .ad{
+        width: 300px;
+        height: 100%;
+        background-color: hotpink;
+        margin: 0 auto;
+        position: relative;
+    }
+    a{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(34, 34, 34);
+        color: white;
+        text-decoration: none;
+        line-height: 20px;
+        text-align: center;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+</style>
+<body>
+    
+    <div class="banner">
+        <div class="ad" style="opacity: 1;">
+            <a  class="over" href="#">X</a>
+        </div>
+    </div>
+
+
+    <script>
+
+        // // 手动关闭
+        var a = document.getElementsByTagName("a")[0];    //获取a标签  "X"
+        // // console.log(a);
+        var ad = document.getElementsByClassName("ad")[0];
+
+        // a.onclick = function(){
+        //     a.parentNode.parentNode.removeChild(a.parentNode);     //杀掉ad
+        // }
+
+
+        // // 自动关闭
+        // var timer = setTimeout(function(){
+        //     a.parentNode.parentNode.removeChild(a.parentNode); 
+        // },5000)
+        // console.log(timer);
+
+
+        // 如果用this的话，this代表当前事件源
+
+
+        // 渐变关闭  opacity
+        // box.style.opacity  只能在行内式取值，取不到css  所以opacity要写到行内式里面
+        console.log(a.parentNode.style.opacity);
+        var timer = setInterval(function(){
+            // 减少opacity
+            a.parentNode.style.opacity -=0.1;
+            if(ad.style.opacity ==0 ){
+                a.parentNode.parentNode.removeChild(a.parentNode);
+                clearInterval(timer);
+            }
+           
+        },100)
+
+    </script>
+</body>
+</html>

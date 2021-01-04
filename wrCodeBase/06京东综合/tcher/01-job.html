@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    @keyframes dh {
+        0%{
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+        }
+        60%{
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+        }
+        100%{
+            width: 70px;
+            height: 70px;
+            opacity: 0;
+        }
+    }
+
+    body {
+        background-color: #222;
+    }
+
+    .map {
+        background: url(./imgs/map.png);
+        width: 747px;
+        height: 617px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .city {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+    }
+
+    .point {
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+        border-radius: 50%;
+    }
+
+    .quan {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 10px yellow;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: dh 1.2s linear infinite;
+    }
+
+    .city .quan:nth-child(3){
+        animation-delay: 0.4s;
+    }
+    .city .quan:nth-child(4){
+        animation-delay: 0.8s;
+    }
+</style>
+<body>
+    <!-- 大数据热点 -->
+
+    <div class="map">
+        <div class="city">
+            <div class="point"></div>
+            <div class="quan"></div>
+            <div class="quan"></div>
+            <div class="quan"></div>
+        </div>
+    </div>
+</body>
+</html>

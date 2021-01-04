@@ -1,0 +1,6 @@
+/* 以 .css 结尾的文件是css的文件 在这里写css的内容不需要style标签 */
+p{
+    font-size: 60px;
+    color: lightblue;
+    background-color: lightcoral;
+}

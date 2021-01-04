@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 970px; height: 593px;  margin: 0 auto;
+    }
+    .b-top{
+        width: 970px;height: 103px;
+        /* float: right; */
+    }
+    .b-middle{
+        width: 970;
+        /* height: 435px; */
+        margin-top: 10px;}
+    .bt-left{
+        width: 277px;height: 103px; background: red; float: left;
+    }
+    .bt-right{
+        width: 679px;height: 103px;  float: right;
+    }
+    .btr-top{
+        width: 137px;height: 49px;background: greenyellow; 
+        float: right;
+    }
+    .btr-bottom{
+        width: 679px; height: 46px; background: greenyellow;
+        float:right;
+        margin-top: 8px;
+    }
+    .bm-left{
+        width: 310px;height: 435px;background:orange;
+        float: left;
+    }
+    .bm-right{
+        width: 650px;height: 435px;
+        float: right;  
+       /* background-color: black; */
+    }
+    .bmr-top{
+        width: 650px;height: 400px;
+        /* float: right; */
+         /* background-color: red; */
+    }
+    .zuo{
+        width: 450px;height: 400px;
+        float: left;
+    }
+    .lanshang{
+        width: 450px;height: 240px;background: aqua;
+    }
+    .lanzhong{
+        width: 450px;height: 110px;background: aqua;margin-top: 10px;
+    }
+    .lanxia{
+        width: 450px;height: 30px;background: aqua;margin-top: 10px;
+    }
+    .you{
+        width: 190px;height: 400px;background: palevioletred;
+        float: right;
+    }
+    .lv{
+        width: 650px;height: 25px;background: green;margin-top: 10px;
+    }
+    .lan{
+        width: 970px;height: 35px; background: blue;margin-top: 10px;
+    }
+    .clearfix::before,
+    .clearfix::after {
+        display: block;
+        content: "";
+        height: 0;
+        line-height: 0;
+        visibility: hidden;/*隐藏*/
+        clear: both;
+    }
+</style>
+<body>
+    <div class="box clearfix">
+        <div class="b-top clearfix">
+            <div class="bt-left"></div>
+            <div class="bt-right">
+                <div class="btr-top"></div>
+                <div class="btr-bottom"></div>
+            </div>
+        </div>
+        <div class="b-middle clearfix">
+            <div class="bm-left "></div>
+            <div class="bm-right ">
+                <div class="bmr-top  ">
+                    <div class="zuo">
+                        <div class="lanshang"></div>
+                        <div class="lanzhong"></div>
+                        <div class="lanxia"></div>
+                    </div>
+                    <div class="you "></div>
+                </div>
+                <div class="lv"></div>
+            </div>
+            </div>
+            <div class="lan"></div>
+        </div>
+</body>
+</html>

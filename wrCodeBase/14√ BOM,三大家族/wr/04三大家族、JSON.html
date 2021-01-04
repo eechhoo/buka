@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    html ,body{
+        height: 2000px;
+        width: 2000px;
+    }
+
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        padding: 10px;
+        border-top: 5px solid pink;
+        border-right: 10px solid pink;
+        border-bottom: 15px solid pink;
+        border-left: 20px solid pink;
+        margin: 10px;
+        position: relative;
+    }
+
+    .z{
+        width: 50px;
+        height: 50px;
+        background-color: blueviolet;
+        position: absolute;
+        top: 50px;
+        left: 80px;
+    }
+</style>
+<body>
+
+    <div class="box">
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <div class="z"></div>
+    </div>
+
+
+    <script>
+
+
+        window.onload = function(){
+        var box = document.getElementsByClassName("box")[0];
+        console.log(box);
+
+        var z = document.getElementsByClassName("z")[0];
+        console.log(z);
+
+        // // 1.offset 家族  只能取值
+        // // 检测盒子自身的宽高 + padding + border
+        // console.log(box.offsetHeight);
+        // console.log(box.offsetWidth);
+
+        // // 检测距有定位的父盒子的左/上的距离     会四舍五入 不精确
+        // console.log(z.offsetLeft);
+        // console.log(z.offsetTop);
+
+        // // // 定位值    麻烦 但精确，可赋值
+        // // console.log(z.style.top);
+        // // console.log(z.style.left);
+        // // parseInt();    Number();
+
+        // // 检测父系盒子中带有定位的节点
+        // console.log(z.offsetParent);
+
+        // // 如果向上找一直没有定位，就找到body为止
+
+
+
+        // // 2.scroll家族  
+        // // scrollWidth = width + padding     不包括border和margin
+        // console.log(box.scrollHeight);
+        // console.log(box.scrollWidth);
+
+        // // 随着页面的滚动实时获取滚动出去的位置
+        // window.onscroll = function(){
+        // console.log(document.body.scrollTop);
+        // console.log(document.body.scrollLeft);
+        // console.log(document.documentElement.scrollTop);
+        // console.log(document.documentElement.scrollLeft);
+        // }
+
+
+        // // DTD 使老版本浏览器能遵循新的标准
+        // // 故事:   2个方面    支持DTD  不支持DTD  对document区域的理解不一样
+        // // 浏览器理解也不一样
+        // // 可视区域：文档区域 : document.body
+        // // 可视区域html  ->  document.documentElement(html)
+        // // 兼容性问题
+
+        //   window.onscroll = function(){
+        //     // 没声明DTD  在火狐浏览器下
+        //     // console.log(document.body.scrollTop);
+        //     // console.log(document.body.scrollLeft);
+        //     // // 声明DTD    在谷歌下
+        //     // console.log(document.documentElement.scrollTop);
+        //     // console.log(document.documentElement.scrollLeft);
+
+        //     console.log(window.pageXOffset);
+        //     console.log(window.pageYOffset);
+
+        //     // 兼容写法
+        //     var aaa = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        //     //aaa 参与运算
+        // }
+
+        
+        // // 获取html标签
+        // document.documentElement;
+
+
+
+        
+        // //scroll封装
+        // function scroll(){
+
+        //     // if(document.compatMode === "BackCompat"){
+        //     //     // 未声明DTD
+        //     //     return {
+        //     //     "top": window.pageYOffset || document.body.scrollTop,
+        //     //     "left": window.pageXOffset ||document.body.scrollLeft
+        //     // }
+        //     // }else{
+        //     //     //声明   CSS1Compat
+        //     //     return {
+        //     //     "top": window.pageYOffset || document.documentElement.scrollTop,
+        //     //     "left": window.pageXOffset || document.documentElement.scrollLeft
+        //     // }
+        //     // }
+
+        //     return {
+        //         "top": window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop,
+        //         "left": window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft
+        //     }
+        // }
+
+
+
+
+
+        // // 3.client 家族
+
+        // // 获取网页可视区域内(盒子的有效大小)宽高
+        // console.log(box.clientHeight);
+        // console.log(box.clientWidth);
+        
+        // console.log(box.scrollHeight);
+        // console.log(box.scrollWidth);
+
+        // // border的大小
+        // console.log(box.clientTop);
+        // console.log(box.clientLeft);
+
+        
+
+
+
+
+        //  // 可视区域大小  封装
+        //  console.log("innerHeight",window.innerHeight);
+
+        // function client() {
+
+        // // window.innerWidth
+        // //  不等于 undefined  说明能取值
+        //     if(window.innerWidth!= undefined){
+        //         return{
+        //             // 窗口可是区域
+        //             width:window.innerWidth,
+        //             height:window.innerHeight
+        //         }
+        // // 支持DTD
+        //     }else if(document.compatMode=== "CSS1Compat"){
+        //         return{
+        //             // documentElement     ==>   html
+        //             width:document.documentElement.clientWidth,
+        //             height:document.documentElement.clientHeight,
+        //         }
+        //     }
+
+        //     // 不支持DTD
+        //     return{
+        //         width:document.body.clientWidth,
+        //         height:document.body.clientHeight
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+        // // JSON 是一种数据格式  也叫JSON对象     与obj区别就是 键值对加双引号
+        // // 经常与后端语言打交道  强类型 
+        // // JSON数据格式转换  ： 数据在进行传输的时候，是没有数据类型的 ，以字符串形式传递
+        // var json ='{ "name" : "jack","age" : 18}';
+
+        // var obj = {
+        //     name : "rose",
+        //     age : 15
+        // } 
+
+
+        // console.log(json);
+        // console.log(obj);
+        // // 转换
+        // console.log(JSON.parse(json));
+        // console.log(JSON.stringify(obj));
+
+    
+
+    
+    }
+
+
+
+    </script>
+    
+</body>
+</html>

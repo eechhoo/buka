@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*css初始化   把所有当前页面涉及到的默认样式全部清除*/
+
+    html , body , h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    a{
+        text-decoration: none;
+    }
+
+    .box {
+        width: 300px;
+        height: 500px;
+        /* background-color: pink; */
+        margin: 100px auto;
+        border:1px solid #cccccc;
+        border-top:3px solid orange;
+    }
+
+    .box > h3 {
+        border-bottom: 1px solid #cccccc;
+        height: 50px;
+        line-height:50px ;
+
+        box-sizing: border-box;
+        /* margin: 0; 清除掉默认样式 */
+        padding-left: 20px;
+        /* text-indent: 1.5em; */
+    }
+
+    .box .con img{
+        display: block;
+        margin: 20px auto 0;
+    }
+
+    .box .con ul{
+        /* background-color: pink; */
+        margin: 10px 30px;
+    }
+    .box .con ul li{
+        list-style: none;
+        background: url(./images/square.png) no-repeat 10px ;
+        /* padding-left: 22px; */
+        /* margin-bottom: 20px; */
+        padding: 10px 0 10px 22px;
+        /* background-color: red; */
+    }
+
+    .box .con ul li:hover a {
+        text-decoration: underline;
+    }
+    .box .con ul li a{}
+</style>
+<body>
+    <div class="box">
+        <h3>搜索趣图</h3>
+        <div class="con">
+            <img src="./images/happy.gif" alt="">
+            <ul>
+                <li><a href="#">小胖卡了 笑了</a></li>
+                <li><a href="#">小胖卡了 笑了</a></li>
+                <li><a href="#">小胖卡了 笑了</a></li>
+                <li><a href="#">小胖卡了 笑了</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

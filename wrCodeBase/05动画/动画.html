@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 500px;width: 100px;background: red;
+        animation: move 2s linear infinite alternate-reverse;
+        position: relative;
+    }
+    @keyframes move{
+        from{
+            height: 500px;width: 100px;background: red;
+            top: 0;left: 0;
+        }
+        to{
+            height: 100px;width: 500px;background: green;
+            top: 200px;left: 200px ;
+        }
+    }
+</style>
+<body>
+    <div class="box"> 
+
+    </div>
+</body>
+</html>

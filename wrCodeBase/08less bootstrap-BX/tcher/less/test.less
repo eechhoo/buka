@@ -1,0 +1,40 @@
+  /* 编译 */
+
+  /* 变量*/
+  @box-color:blue;
+
+  @box-width:400px;
+
+  .box {
+      width: @box-width;
+      background-color:@box-color;
+  }
+
+
+  .box2{
+      font-size: 30px;
+      .box()
+  }
+
+  @size:30rem;
+  @size2:10px;
+
+  @all-color:#354c33 * #222;
+
+  .f{
+      background-color: #fff;
+      font-size:@size - @size2;
+      .s{
+        background-color:@all-color;
+          p{
+            background-color:@all-color;
+              span {
+                background-color:@all-color;
+                  a{
+                    background-color:@all-color;
+
+                  }
+              }
+          }
+      }
+  }

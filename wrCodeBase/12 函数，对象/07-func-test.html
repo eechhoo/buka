@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    td{
+        border: 1px solid red;
+    }
+
+    .odd{
+        background-color: pink;
+    }
+
+    .even {
+        background-color: aqua;
+    }
+</style>
+<body>
+    
+    <script>
+
+
+    get99(5)
+
+    function get99(num){
+            document.write("<table>");
+
+            for(var i = 1 ; i <= num ;i++){    /*i    1  -  9*/
+                
+                var cName = "odd";
+
+                if(i % 2 === 0){
+                    // 偶数
+                    cName="even";
+                }
+
+                document.write("<tr class="+cName+">");
+                for(var j = 1 ; j <= i ; j++){
+                    document.write("<td>");
+                    document.write(i+"x"+j+"="+ (j*i));
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+
+            document.write("</table>");
+        }
+
+
+    </script>
+</body>
+</html>

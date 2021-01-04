@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+
+</style>
+
+
+
+<body>
+
+    <div class="box" id="box"></div>
+
+
+
+    <script>
+
+
+        //BOM  顶级对象叫 window
+        console.log(window);
+
+        // alert();  //window.alert();
+        var num = 666;  //window.num = 666;
+        function fn(){};  //window.fn = function{};
+
+        //打开网页
+        //1.可以设置跳转方式
+        // var o = window.open("http://www.baidu.com","_target");  
+
+        //2.在原网页直打开
+        window.location
+        console.log(window.location);
+
+        // 取巧方法 ，获取带id的元素可以直接  id.事件名=function（）{}    正常应该document.来获取
+        box.onclick = function(){
+            // window.location.href = "http://bukaedu.com";
+
+            //关闭网页
+            // window.close();  //浏览器不支持,只能关闭自己创建的页面
+        }
+
+        // console.log(o);
+
+        var o2 = location.herf = "http://www.bukaedu.com";
+        console.log(o2);
+
+
+        
+        // //创建小页面n
+        // var n = window.open("","","height=300px,width=200px");
+
+        // //往n里面写东西
+        // n.document.write();
+        // console.log(n);
+
+        // // moveTo  控制n出现的位置
+        // n.moveTo(500,500);
+
+        
+
+        // history  go/back 前进后退
+        box.onclick = function(){
+            history.back();   //windows.history.back();
+            history.go(-1);   //-1 后退  1前进
+        }
+
+
+
+
+
+
+
+        
+
+ 
+
+
+
+
+    </script>
+</body>
+</html>

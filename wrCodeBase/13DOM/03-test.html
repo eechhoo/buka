@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    header {
+        height: 200px;
+    }
+
+    header a img{
+        height: 100%;
+    }
+
+    header a {
+        height: 200px;
+        display: block;
+    }
+
+    .con img {
+        height: 500px;
+    }
+
+
+    .tab{
+        border: 1px solid red;
+
+        border-collapse: collapse;
+    }
+    .tab td {
+        border: 1px solid red;
+    }
+    
+    .odd{
+        background-color: rgb(58, 114, 187);
+    }
+    .even{
+        background-color: rgb(231, 231, 83);
+    }
+</style>
+<body>
+    
+    <!-- 
+        练习:  图片展示 , 有缩略图,点击缩略图查看大图和文字标题
+
+    -->
+
+    <h1>相册</h1>
+    <header>
+        <a href="#" title="我是一个桌面壁纸图片" imgPath="./images/buka-big.png">
+            <img class="small" src="./images/buka.png" alt="">
+        </a>
+    </header>
+
+    <div class="con">
+        <img class="big" src="./images/zw.png" alt="">
+
+        <p id="content">解释性文字</p>
+    </div>
+
+
+
+
+    
+
+    <script>
+
+
+//高级表格
+
+// 动态创建 元素(table-> tr -> td) , 奇数行偶数行颜色区分 , 鼠标经过高亮样式
+
+var  table = document.createElement("table");
+table.setAttribute("class","tab");
+
+for(var i = 0 ; i < 5 ;i++){
+    var tr = document.createElement("tr");
+    // class
+    if(i % 2 == 0){
+        tr.setAttribute("class","even");
+    }else{
+        tr.setAttribute("class","odd");
+    }
+    //td
+    for(var j = 0 ; j < 7 ; j++){
+        var td = document.createElement("td");
+        tr.appendChild(td);
+        td.innerHTML= "个该独户";
+    }
+    table.appendChild(tr);
+    tr.onmouseover = function(){
+        this.style.opacity = ".7";
+    }
+    tr.onmouseout = function(){
+        this.style.opacity = "1";
+    }
+}
+
+// console.log(table);
+
+document.body.insertBefore(table,document.getElementsByTagName("h1")[0])
+
+
+
+
+
+//相册
+
+        // var small = document.getElementsByClassName("small")[0];
+        // var a = small.parentNode;
+        // // var big = document.getElementsByClassName("big")[0];
+        // var big = a.parentNode.nextElementSibling.firstElementChild;
+        // // var p = document.getElementById("content");
+        // var p = big.nextElementSibling;
+
+
+        // console.log(small);
+        // console.log(a);
+        // console.log(big);
+        // console.log(p);
+
+        // small.onclick = function(){
+        //     // 路径  和 文字
+        //     // var path = a.getAttribute("imgPath");
+
+        //     var path = this.parentNode.getAttribute("imgPath");
+        //     // console.log(path);
+        //     var content =  this.parentNode.getAttribute("title");
+        //     // console.log(content);
+
+        //     // this  关键字   代表当前触发事件的 事件源
+
+
+        //     this.parentNode.parentNode.nextElementSibling.firstElementChild.src = path;
+        //     this.parentNode.parentNode.nextElementSibling.firstElementChild.nextElementSibling.innerHTML = content;
+        //     // p.innerHTML = content;
+        // }
+
+
+
+    </script>
+</body>
+</html>

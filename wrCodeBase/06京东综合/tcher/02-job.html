@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,body {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        background-color: #ccc;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .bg_2{
+        position: absolute;
+        background: url(./imgs/bg2.png);
+        bottom: 0;
+        left: 0;
+        height: 569px;
+        width: 100%;
+        background-position: 0 0;
+        animation: bg_move 20s linear infinite;
+    }
+    .bg_1{
+        position: absolute;
+        background: url(./imgs/bg1.png);
+        bottom: 0;
+        left: 0;
+        height: 336px;
+        width: 100%;
+        background-position: 0 0;
+        z-index: 10;
+        animation: bg_move 15s linear  infinite;
+    }
+
+
+    @keyframes bg_move{
+        0%{
+            background-position: 0 0 ;
+        }
+        100%{
+
+            background-position: -3840px 0 ;
+        }
+    }
+
+
+    .bear {
+        position: absolute;
+        z-index: 999;
+        left: -200px;
+        width: 200px;
+        height: 100px;
+        background: url(./imgs/bear.png);
+    }
+
+    .bear_1 {
+        bottom: 100px;
+        animation: bear .6s steps(8) infinite , move 5s linear 2s infinite;
+    }
+
+    .bear_2 {
+        width: 100px;
+        height: 50px;
+        bottom: 50px;
+        background-size: 800px;
+        animation: bear_50 .4s steps(8) infinite , move 3s linear 1s infinite;
+    }
+
+
+    @keyframes bear {
+        0%{
+            background-position: 0 0 ;
+        }
+        100%{
+            background-position: -1600px 0;
+        }
+    }
+
+    @keyframes bear_50 {
+        0%{
+            background-position: 0 0;
+        }
+        100%{
+            background-position: -800px 0;
+        }
+    }
+
+    @keyframes move {
+        0%{
+            left: -200px;
+        }
+        100%{
+            left: 100%;
+
+        }
+    }
+</style>
+<body>
+    <!-- 背景 -->
+    <div class="bg_1"></div>
+    <div class="bg_2"></div>
+    <!-- 熊 -->
+    <div class="bear bear_1"></div>
+    <div class="bear bear_2"></div>
+    <div class="bear bear_3"></div>
+</body>
+</html>

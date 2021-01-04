@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(255, 0, 43);
+    }
+
+    .f  {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+    }
+
+    .s{
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        cursor: pointer;
+    }
+
+    a{
+        display: inline-block;
+        width: 100px;height: 100px;
+        background-color: aqua; 
+    }
+</style>
+<body>
+
+<p>pppppp</p>
+<a href="javascript:;">a标签</a>
+<div class="box"  id="box"  onclick="">box</div>
+
+<div class="f" id = "f">f
+    <div class="s">s</div>
+    <div class="s1">s1</div>
+</div>
+
+
+
+<script>
+    // DOM
+    // Document   Object    Module
+    // 在js语言环境中 去获取和控制 html元素和他们的关系
+
+    //1
+    var box = document.getElementsByTagName("div")[0];
+
+
+    console.log(box);
+
+    //2
+
+    // var s = document.getElementsByClassName("s");
+    // console.log(s[0]);
+    // var f = document.getElementById("f");
+    // console.log(f);// 元素对象(属性 方法)
+
+    // 添加事件
+    // low  在html身上加事件
+
+    function fn(){
+        alert("box被电击了,哈哈哈");
+    }
+
+
+
+    // up 
+
+    // 获取事件源
+    // 绑定事件
+    // 书写事件驱动程序(当事件发生, 具体要干什么)
+
+    box.onclick = function (){
+        console.log("通过js 绑定了事件");
+    }
+
+    // 能做所有你想到的事 (样式,动画....)
+
+    
+    console.log(box.style.backgroundColor = "yellow");
+    console.log(  box.parentNode );   //输出父节点
+
+    //通过子盒子设置父盒子的背景色。
+
+    // var f = document.getElementsByClassName("f")[0];
+
+    var s = document.getElementsByClassName("s")[0];
+
+    // var f = s.parentNode.style.backgroundColor = "blue";
+    
+    // f.style.backgroundColor = "black";
+
+    console.log(f,s);
+
+    s.onclick = function(){
+        //小的被电击了 , 大的变颜色
+        f.style.backgroundColor = "blue";
+    }
+
+    // 兄弟
+
+    var sbl = box.nextElementSibling  || box.nextSibling;
+    var psbl = box.previousElementSibling  || box.previousSibling;
+
+    console.log("兄弟:",sbl);
+
+    //孩子
+
+    var s = f.firstElementChild || f.firstChild;
+
+    console.log(s);
+
+    var childs = f.childNodes;
+
+    console.log(
+        childs
+    );
+
+    for(var i = 0 ; i < childs.length ; i++){
+        //childs[i].nodeType
+
+        if(childs[i].nodeType == 1){      //麻烦但推荐使用
+            console.log(childs[i]);
+        }
+    }
+
+    var childs = f.children;         //简单但不推荐
+    console.log(childs);
+
+
+    // 封装 : 那所有的兄弟
+    var box = document.getElementById("box");
+    console.log("box:" , box);
+    var res = getAllSibling(box);
+
+    console.log("res:" , res);
+
+
+
+    function getAllSibling (ele){
+        var p = ele.parentNode;
+        var childs = p.children;//包括他自己
+        var siblings = [];
+
+        for(var i = 0 ; i< childs.length ; i++){
+            //childs[i]
+
+            if(childs[i] === ele){
+                continue;
+            }
+
+            //将兄弟们保存至新数组
+            siblings.push(childs[i]);
+        }
+
+        return siblings;
+    }
+
+
+
+</script>
+</body>
+</html>

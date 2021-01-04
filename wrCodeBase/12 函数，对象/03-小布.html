@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(true){
+            var res = prompt("你好,我是语音助手小布,请告诉我 你要做什么?\n\r1)获取当前时间\n\r2)获取一个笑话\n\r3)计算器");
+
+            if(res != "" && res != null){
+                switch (res){
+                    case "1":
+                        //获取时间
+                        var date = new Date();
+                        alert("当前时间:" + date.getFullYear() +"年" + (date.getMonth() + 1) + "月" + date.getDate()+"日 , 星期" + (date.getDay()== 7 ? "日" : date.getDay()));
+                        break;
+                    case "2":
+                        var joke = [
+                            "笑话1",
+                            "笑话2",
+                            "笑话3",
+                            "笑话4",
+                            "笑话5"
+                        ];
+
+                        // 随机  Math.random()  0 - 1 之间的随机数  * 5  => 0  4.999999   取整paresInt()
+                        // alert(parseInt(Math.random()*joke.length));
+                        alert(joke[parseInt(Math.random()*joke.length)]);
+                    break;
+                    case "3":
+                        var arrStr = prompt("请输入要计算的数字,多个数字以逗号分割 例: 1,2,3");
+                        //变成数组  split() 用什么切割数组
+                        var arr = arrStr.split(",");
+                        var sum = 0;
+
+                        for(var i = 0 ; i < arr.length ; i++){
+                            sum += Number(arr[i]);
+                        }
+
+                        alert(sum);
+                    break;
+                    default:
+                        alert("没有这样的指令, 我不明白!");
+                    break;
+                }
+
+            }else{
+                // 空字符串   null
+                alert("我理解不了");
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

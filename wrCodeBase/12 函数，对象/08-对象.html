@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+    //  typeof 检测是哪个基本数据类型
+
+    //ionstanceof  只能用来检测 复杂数据类型
+
+    var num = 123;
+
+    var arr = [1,2,3] ;
+
+    var  obj = {};
+    // console.log(typeof  arr);
+
+    console.log( arr instanceof  Object );
+    console.log( arr instanceof  Array );
+    console.log( obj  instanceof  Object);
+
+    console.log( num  instanceof  Number);
+    console.log( "abc"  instanceof  String);
+
+    //  new  执行过程
+    //  内存 : 栈  堆
+    //  作用域 -->  栈内存( var  num = 666;  function fn(){})
+
+    // new 创建的 都在 堆里
+
+    // 值作为参数的传递 (基本数据类型 , 复杂数据类型)
+
+
+    // var  a = 1;
+    var obj = {name:'jack',age:16};
+
+    function changeValue(args){
+
+        //args = 1
+        // args = 666;
+
+        args.name = "rose";
+    }
+
+    changeValue(obj);
+
+    console.log(obj.name);
+
+
+
+
+
+
+
+
+        function create(name,sex,color){
+            var obj = new Object();
+            obj.name = name;
+            obj.sex= sex;
+            obj.color  = color;
+            return obj;
+        }
+
+
+        var   p1 = create('jack',"男","白")
+        var   p2 = create('rose',"女","黑")
+
+        console.log(p1,p2);
+
+
+        //  通过  this  关键字  简化 工厂模式
+        // this 在函数内部代表  当前函数的实例化对象
+
+
+        // 构造函数 就是用来 new 的
+        // 别人看到你的function名字 首字母大写,下意识会反应说他是一个构造函数 , 用来new创建对象
+        // 约定俗成
+        function CreateP(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        // 怎样产出对象?    new  关键字
+
+        var ps1 = new CreateP("张三",23);
+        var ps2 = new CreateP("李四",24);
+
+        console.log(ps1,ps2);
+
+
+        // 对象
+
+        // es5  本身 不支持面向对象
+        // 面向对象
+
+        //   对象  实例化       类型 -> 类
+        //   人类  -->  人
+
+        // 类   实例化对象
+
+        // 面向过程   <--->   面向对象
+
+        // 烤冷面
+
+
+        //创建  
+
+        //字面量 
+
+        // var obj = {  键值对  名:值 , 名:值 };
+
+        var  obj = {
+            name:"jack", // 理解成了 这个对象的属性
+            age:16,
+            gender:"男",
+            speak: function(){
+                console.log("hellow  world");
+            }
+        };
+
+        console.log(obj);
+
+        console.log(obj["name"]);
+        console.log(obj.gender); // .后面是属性名
+
+        // 对象遍历
+
+        for( var key  in  obj ){
+            // console.log(key);
+            console.log(key + ":" + obj[key]);
+        }
+
+
+        obj.speak()
+
+
+        var obj2 = new Object();
+
+        console.log(obj2);
+    </script>
+</body>
+</html>

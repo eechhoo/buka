@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// - 练习1：统计班级学生就业薪资，计算总薪资 和 平均薪资。
+
+var money = [15000,23000,38000,1200,12000];
+var sum = 0;
+
+// 最大索引值 :  数组.length - 1
+
+// for(var i = 0 ;i <= money.length-1 ; i++){
+//     //arr[i]
+
+//     // sum = sum + money[i];
+
+//     sum += money[i];
+
+//     // console.log(money[i]);
+// }
+
+// console.log(sum / money.length);
+
+// - 练习3：给一个不重复的数字数组，求最大值和最大值的在数组中的位置
+
+var money = [15000,23000,38000,1200,12000];
+var max = money[0];
+var maxIndex = 0;
+
+for(var i = 0 ; i< money.length ; i++ ){
+    //money[i]
+
+    if(money[i] > max){
+        max = money[i]
+        maxIndex = i
+    }
+}
+
+console.log(max , maxIndex);
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="box">66</div>
+
+
+    <script>
+        // 定时器
+
+
+        // window.setTimeout
+        // setTimeout(function(){
+        //     alert("boom  我爆炸了");
+        // },1000) // 1000ms = 1s
+
+        console.log(1);
+        console.log(2);
+        console.log(3);
+
+
+        var timer = setInterval(function(){
+            console.log("我爆炸了");
+        } , 100)
+
+
+        box.onclick = function(){
+            clearInterval(timer);
+        }
+
+        var timer2 = setInterval(function(){
+            console.log("我爆炸了");
+        } , 100)
+
+
+        // console.log(timer,timer2);
+
+        // JS  语言特性 ?  DOM
+        // 单线程的
+
+        // 定时器特点  --->  异步的(不在主线程里, 自己为一个子线程)  -->  感受 ajax
+        // 执行方式 : 先放到线程池
+
+
+        console.log(4);
+        console.log(5);
+        console.log(6);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        height: 5000px;
+        background-color: #ccc;
+    }
+
+    div.box {
+        width: 900px;
+        height: 600px;
+        background-color: red;
+        background-image: url(./images/pz.jpg);
+        background-repeat: no-repeat;
+
+        /*定位  第二個值不寫 默認為center*/
+        /* background-position: 30px  30px;*/
+        /*固定*/
+        /*background-attachment: fixed;
+
+
+        background: transparent; */
+
+        /* background-size: 80px  80px; */
+
+        /* background-size: contain; */
+
+        background:
+                    url(./images/pz.jpg) no-repeat 0 0 / 80px 80px,
+                    url(./images/pz.jpg) no-repeat right top / 80px 80px,
+                    url(./images/pz.jpg) no-repeat left bottom / 80px 80px,
+                    red url(./images/pz.jpg) no-repeat right bottom / 80px 80px;
+    }
+
+    /* text-shadow */
+
+    p {
+        text-shadow: 10px 10px 30px red,
+                     -10px -10px 30px blue
+        ;
+    }
+</style>
+
+<body>
+
+    <!-- <img src="" alt=""> -->
+
+    <div class="box"></div>
+
+    <p>我是文字</p>
+    普通文字
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    html,body {
+        height: 3000px;
+    }
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        position: absolute;
+        top: 100px; 
+        left: 300px;
+        line-height: 300px;
+    }
+</style>
+<body>
+    
+    <div class="box" id="box"></div>
+
+    <script>
+
+        // /点击鼠标跟随
+
+        // 鼠标在盒子中的位置
+        //onmousemove  事件
+
+        box.onmousemove = function(ev){
+
+            ev = ev || window.event;
+            // console.log("鼠标在我身上 ");
+
+            // clientX - box.left
+
+            var pageX = ev.pageX || ev.clientX + this.offsetLeft
+
+            var  pageY = ev.pageY || ev.clientY + this.offsetTop;
+
+            var x = pageX - this.offsetLeft
+            var y = pageY - this.offsetTop
+
+            box.innerHTML = `X:`+x+`Y:`+y;
+        }
+
+
+    </script>
+</body>
+</html>

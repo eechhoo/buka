@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul,li{
+        margin: 0;
+        padding: 0;
+    }
+    div{
+        width: 200px;
+        margin: 0 auto; background: red;
+    }
+    ul{
+        list-style-type: none;
+    }
+    li{
+        width: 200px;background: lightblue; border-top: 2px solid green;
+        display:block;
+        text-align: center;
+        transition: all .5s;
+
+    }
+    .box{
+        height: 0px;width: 200px;background:pink; 
+        transition: all .5s;
+    }
+
+    li:hover .box{
+        height: 200px;width: 200px;background:pink; 
+    }
+
+
+</style>
+<body>
+    <div>
+        <ul>
+            <li>今日新闻<div class="box"></div></li>
+            <li>今日新闻<div class="box"></div></li>
+            <li>今日新闻<div class="box"></div></li>
+            <li>今日新闻<div class="box"></div></li>
+            <li>今日新闻</li><div class="box"></div>
+            <li>今日新闻</li><div class="box"></div>
+            <li>今日新闻</li><div class="box"></div>
+        </ul>
+    </div>
+</body>
+</html>

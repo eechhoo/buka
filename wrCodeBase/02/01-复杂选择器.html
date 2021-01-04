@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /*既是div又有class的值 box  交集选择器*/
+    /* div.box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+
+    div#b-id{
+        width: 300px;
+        height: 400px;
+    } */
+
+    /*并集选择器*/
+
+    /* .box , #b-box , span , li {
+        color: pink;
+    } */
+
+    /* 子代选择器  寻找直接的亲儿子关系*/
+
+    /* .box2 > p > span {
+        color: orange;
+    } */
+
+    /* 后代 选择器 */
+
+    /* .box2 span   {
+        background-color: yellow;
+    } */
+
+    .box2  li span {
+        background-color: green;
+    }
+
+</style>
+<body>
+    
+
+    <div class="box" id="b-id">我是div</div>
+    <p class="box" id=b-id>我是一个p</p>
+
+
+    <div class="box2">
+        <p>
+            我是box2的孩子 ppppp
+            <span>我是p的孩子 span</span>
+        </p>
+
+        <span>我是 pppp 的兄弟</span>
+
+        <ul>
+            <li>
+                <p>
+                    <span>我是最最最最深层的span</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

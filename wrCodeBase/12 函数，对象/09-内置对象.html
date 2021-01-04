@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //String
+
+
+        var  str = "Ac5bc8uc5g7hc7hfr45";  //ac5b === 
+
+        // console.log(str.trim());
+        // console.log(str.toLocaleUpperCase());  // 验证码
+
+        console.log(str.split("c"));
+
+        
+        // console.log(str.replace("5","乄"));
+
+        // console.log(str.concat("☆"));
+        // console.log(str.charAt(2));
+        // console.log(str[0]);
+
+
+
+        //Array
+
+
+        var arr = [11,22,33,44,55];
+
+        var  arr2 = ["a","b","c"];
+
+        // console.log(arr.slice(0 , 2));  // 包左  不包 右
+
+        // console.log(arr.splice(0,4,"★"));
+
+        // console.log(arr.indexOf(332222));
+
+        // console.log(arr.join("|"));
+
+        console.log(  arr.sort(function(a,b){
+            return b-a;
+        }) );
+
+        // console.log(arr.reverse());
+
+
+        // console.log(  arr.concat(arr2)   );
+        // console.log(  arr.push(arr2)   );
+
+        // arr.push("★");
+        // arr.unshift("★");
+        // console.log( arr.unshift("★"));
+
+        // var item = arr.shift()
+        // console.log(item);
+
+        // // var  item = arr.pop();
+        // console.log("删掉了:" + item);
+
+        console.log(arr.toString());
+        console.log(arr.valueOf());
+
+        //Date
+
+        var old = new Date("1988-3-12");
+
+        console.log(old.toDateString());
+
+        var  now = new Date();
+
+        // console.log(now);
+        // console.log(now.getFullYear());
+        // console.log(now.getMonth() + 1);
+        // console.log(now.getDate());
+        // console.log(now.getDay());
+        // console.log(now.getHours());
+        // console.log(now.getMinutes());
+        // console.log(now.getSeconds());
+
+        // // 时间戳  (毫秒值)  指的是 从1970年1月1日 0点0分0秒开始 到现在为止 一共多少毫秒
+        
+        // console.log("时间戳",now.getTime());
+        // console.log("时间戳",now.valueOf());
+        // console.log("时间戳",Date.now());
+
+        // Math
+
+        var  num = 3.6789;
+
+        var arr  = [4,3,2,1];
+        console.log(Math.PI);
+
+        console.log(Math.random());// 0 - 1 随机数  无限趋近1
+
+        console.log( Math.ceil(num));
+        console.log( Math.floor(num));
+        console.log( Math.abs(num));
+        console.log( Math.round(num));
+        console.log( Math.max(33,44,55,66));
+        console.log( Math.min(1,2,3,4));
+        console.log( Math.pow(2,3));
+
+        //公式
+
+        // Math.floor( Math.random() * (大数 - 小数 + 1) + 小数 );
+
+        // 10  -  30
+        
+        console.log(  Math.floor( Math.random() * (30 - 10 + 1) + 10 ));
+
+        //随机生成RGB颜色
+
+        function getColor(){
+
+            // 0 - 255   rgb( , , )
+
+            return  
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html , body {
+        width: 3000px;
+        height: 2000px;     
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        padding: 10px;
+        border-top: 5px solid  pink ;
+        border-right: 10px solid  red ;
+        border-bottom: 15px solid  blue ;
+        border-left: 20px solid  green ;
+        margin: 10px;
+        /* position: relative; */
+    }
+
+    .f{
+        width: 100px;   
+        height: 100px;
+        background-color: yellow;
+    }
+
+    .z{
+        width: 50px;
+        height: 50px;
+        background-color: green;
+        position: absolute;
+        top: 70px;
+        left: 90px;
+    }
+</style>
+<body>
+    <div class="box">
+        <!-- <div class="f">
+            <div class="z"></div>
+        </div> -->
+
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+        <p>我是一段文字</p>
+    </div>
+
+
+    <script>
+        var  box = document.getElementsByClassName("box")[0];
+        var z = box.firstElementChild.firstElementChild;
+
+        //client
+
+        //可视区域 盒子的有效大小
+        console.log(box.clientHeight);
+        console.log(box.clientWidth);
+
+        console.log(box.scrollHeight);
+        console.log(box.scrollWidth);
+
+        // border
+        console.log(box.clientTop);
+        console.log(box.clientLeft);
+        // console.log(box.clientRight);                X
+
+
+        // 可视区域大小  封装
+
+
+        console.log("innerHeight",window.innerHeight);
+
+        function client() {
+
+            // window.innerWidth
+            //  不等于 undefined  说明能取值
+                if(window.innerWidth!= undefined){
+                    return{
+                        // 窗口可是区域
+                        width:window.innerWidth,
+                        height:window.innerHeight
+                    }
+            // 支持DTD
+                }else if(document.compatMode=== "CSS1Compat"){
+                    return{
+                        // documentElement     ==>   html
+                        width:document.documentElement.clientWidth,
+                        height:document.documentElement.clientHeight,
+                    }
+                }
+
+                // 不支持DTD
+                return{
+                    width:document.body.clientWidth,
+                    height:document.body.clientHeight
+                }
+        }
+
+
+
+        // 随着滚动 实时知道  上和左滚出去了多少
+        // 1. 兼容性问题 不同浏览器支持效果不一样
+        // 没有检测到实时位置
+
+        // window.onscroll = function(){
+        //     // 没声明DTD  在火狐浏览器下
+        //     // console.log(document.body.scrollTop);
+        //     // console.log(document.body.scrollLeft);
+        //     // // 声明DTD    在谷歌下
+        //     // console.log(document.documentElement.scrollTop);
+        //     // console.log(document.documentElement.scrollLeft);
+
+
+        //     console.log(window.pageXOffset);
+        //     console.log(window.pageYOffset);
+
+        //     var aaa = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;//"" undefind
+        //     //aaa 参与运算
+
+        // }
+
+
+        //scroll封装
+
+
+        // function scroll(){
+
+
+        //     if(document.compatMode === "BackCompat"){
+        //         // 未声明DTD
+        //         return {
+        //         "top": window.pageYOffset || document.body.scrollTop,
+        //         "left": window.pageXOffset ||document.body.scrollLeft
+        //     }
+        //     }else{
+        //         //声明   CSS1Compat
+        //         return {
+        //         "top": window.pageYOffset || document.documentElement.scrollTop,
+        //         "left": window.pageXOffset || document.documentElement.scrollLeft
+        //     }
+        //     }
+
+
+            // return {
+            //     "top": window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop,
+            //     "left": window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft
+            // }
+        // }
+
+
+        //  JSON   是一种数据格式  也叫 JSON对象
+        //  经常和后端语言打交道  , 强类型
+        //  JSON数据格式转换  : 数据在进行传输的时候, 是没有数据类型的 , 字符串形式 去传递
+
+
+        
+        // JSON.stringify()
+
+        // var json = '{"name":"jack","age":18}';
+
+        // var obj = {
+        //     name:'rose',
+        //     age:80
+        // }
+
+        // console.log(obj);
+        // console.log(JSON.stringify(obj));
+
+        // console.log(json);
+        // console.log(JSON.parse(json));
+
+        // for(var k   in json){
+        //     console.log(k);
+        // }
+
+        //DTD
+        // 故事:   2个方面    支持DTD  不支持DTD  对document区域的理解不一样
+        // 浏览器理解也不一样
+        // 可视区域：文档区域 : document.body
+        // 可视区域html  ->  document.documentElement(html)
+
+        // 兼容性
+
+
+        //width+padding
+        // console.log(box.scrollHeight);
+        // console.log(box.scrollWidth);
+
+
+        //取值 不能赋值
+        // console.log(z);
+        // console.log(box.offsetHeight);
+        // console.log(box.offsetWidth);
+
+        // // 定位值
+        // // console.log(z.style.top);
+        // // console.log(z.style.left);
+        // // parseInt()    Number()
+
+        // //损失精度
+        // console.log(z.offsetTop);
+        // console.log(z.offsetLeft);
+
+
+        // console.log(z.offsetParent);
+    </script>
+</body>
+</html>

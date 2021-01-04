@@ -1,0 +1,194 @@
+body{
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #666;
+    background-color: #ccc;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ------------------------------- */
+header {
+    height: 44px;
+    /* background-color: red; */
+    display: flex;
+    background-color: #f6f6f6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    min-width: 320px;
+    max-width: 540px;
+}
+
+header  .search {
+    flex:1;
+    background-color: #fff;
+    margin: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    position: relative;
+    padding-left: 25px;
+    line-height: 32px;
+}
+
+header .search::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    width: 14px;
+    height: 14px;
+    background: url(../imgs/sprite.png) no-repeat -60px -280px ;
+    background-size: 104px;
+}
+
+header .user {
+    width: 44px;
+    height: 44px;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .user .img  {
+    height: 24px;
+    width: 24px;
+    background: url(../imgs/sprite.png) no-repeat -58px -193px;
+    background-size: 104px;
+    margin-top: 3px;
+}
+
+header .user span {
+    color: #666;
+}
+
+
+/* ------------------------------- */
+
+.banner {
+    margin-top: 50px;
+}
+
+.banner a{
+    display: block;
+}
+
+.banner a img{
+    width: 100%;    
+}
+
+/* ----------------------------- */
+
+.nav_1 {
+    height: 70px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 3px 5px;
+}
+
+
+.nav_1 a{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_1 a .icon{
+    width: 32px;
+    height: 33px;
+    background: url(../imgs/localnav_bg.png);
+    background-size: 32px;
+    margin: 6px 0;
+}
+
+.nav_1 a span {
+    color: #666;
+}
+
+
+.nav_2 {
+
+    height: 140px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 3px 5px;
+    flex-direction: column;
+}
+
+.nav_2 .row {
+    display: flex;
+}
+
+
+.nav_2 .row a{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_2 .row a .icon{
+    width: 32px;
+    height: 33px;
+    background: url(../imgs/localnav_bg.png);
+    background-size: 32px;
+    margin: 6px 0;
+}
+
+.nav_2 .row a span {
+    color: #666;
+}
+
+
+/* ----------------------- */
+
+nav {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+nav .one{
+    height: 88px;
+    display: flex;
+    background: -webkit-linear-gradient(0deg,red,blue);
+}
+
+nav  .one:nth-child(2){
+    margin: 3px 0;
+}
+
+nav .one .box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+nav .one .box a {
+    flex: 1;
+    line-height: 44px;
+    text-align: center;
+    color: #fff;
+}
+
+nav .one .box:nth-child(1) a {
+    background: url(../imgs/hotel.png) no-repeat;
+    background-size: 80%;
+    background-position: bottom;
+}
+
+nav .one .box:nth-child(n+2){
+    border-left: 1px solid #fff;
+}

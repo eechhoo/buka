@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    //onload
+    window.onload = function (){
+
+        var box= document.getElementsByClassName("box")[0]
+
+        console.log(box);
+
+    // onclick
+    // onmouuseover
+    // onmouseout
+    // onscroll
+
+
+    //onresize
+
+    window.onresize = function (){
+        // console.log("窗口大小变化了");
+        // width的数值 判断  你是什么设备 
+        // console.log(window.screen.width);
+        // console.log(window.screen.height);
+
+        console.log(window.innerWidth);
+
+        if(window.innerWidth < 800){
+                document.body.style.backgroundColor = "red";
+        }else if(window.innerWidth < 1200){
+            document.body.style.backgroundColor = "blue";
+        }else {
+            document.body.style.backgroundColor = "white";
+        }
+    }
+
+
+
+    //onchange
+
+    // username.onchange = function(){
+    //     console.log(username.value);
+    // }
+
+    //onkey....
+
+    username.onkeydown = function(){
+        con.innerHTML = this.value;
+    }
+
+}
+
+//三大家族  杂 
+
+
+// Height   Width
+// Left     Top
+// 事件对象   三个参照物
+
+
+    </script>
+
+
+<input type="text" id="username">
+<p id="con"></p>
+
+<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">点我停止爆炸</div>
+
+    <script>
+
+    //定时器
+    // 1.炸弹定时器
+    window.setTimeout(function(){
+        alert("boom 我爆炸了")
+    } , 2000 )  //3000ms
+
+    // 不会停止
+   var timer = setInterval(function(){
+        console.log("我爆炸了");
+    },2000)
+
+    // 停止
+    box.onclick = function(){
+        clearInterval(timer);
+    }
+
+    console.log(timer);  //timer是一个编号 
+
+    // Js 语言特性是单线程的 为了避免操作冲突
+    // 定时器的特点是 异步的   ajax
+    // 定时器执行方式： 不在主线程里面  放在线程池里面 作为子线程 等主线程执行结束在执行
+
+    </script>
+
+
+
+</body>
+</html>

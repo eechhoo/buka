@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+       background: purple;
+    }
+    .left{ 
+        height: 200px;width: 200px;background: red; 
+        float: left;
+    }
+    .right{
+        height: 200px;width: 200px;background: green; 
+        float: right;
+    }
+    .bottom{
+        height: 50px;width: 500px;background: yellow;
+    }
+
+        /* 清楚浮动 */
+    .clearfix::before,
+    .clearfix::after {
+        display: block;
+        content: "";
+        height: 0;
+        line-height: 0;
+        visibility: hidden;/*隐藏*/
+        clear: both;
+    }
+    .clearfix{
+        zoom:1; /*只有ie认识它*/
+    }
+</style>
+<body>
+    <div class="box clearfix">
+        <div class="left "></div>
+    </div>
+        <div class="bottom"></div>
+</body>
+</html>

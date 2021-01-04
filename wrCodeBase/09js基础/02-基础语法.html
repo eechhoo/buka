@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  我body中正常的内容
+
+
+  <script>
+
+//练习 ：
+
+//  1. 让用户输入一个三位数【整数】，使用代码分别获取到这个三位数字百位，十位，个位上的数字。
+
+var number = parseInt(prompt("请输入一个三位数整数 : "));
+
+console.log(number);
+
+var b =  parseInt(number / 100);
+console.log(b,"百位");
+
+var s = parseInt(   (number - (b*100)) / 10   );
+
+console.log(s,"十位");
+
+var g = parseInt(   (number - (b*100 + s*10))  );
+
+console.log(g,"个位");
+
+
+
+
+
+
+    // 数据类型转换
+
+
+    var num = null;
+    // 非0非空非false非特殊值  都是true
+
+    // console.log(Boolean(num));
+
+
+
+
+    // console.log(  num + ''   );
+
+
+    // console.log(    String(num));
+
+    
+    // console.log( num.toString() );
+
+    // var n = null;
+
+    // n.toString();   x
+
+
+
+    // var str = "123.8abc";
+    // console.log( typeof  str);
+
+    // console.log(    Number(str)    );
+    // console.log( parseInt(str) ,"-------parseInt" );
+    // console.log( parseFloat(str) ,"-------parseFloat" );
+
+
+
+
+    // 练习：
+    // 计算总工资(总工资 = 基础工资 + 绩效工资)  --> 交互 , 基本工资让用户自己输入.
+
+    // var res = prompt("请输入你的基本工资数:");
+
+    // console.log(res); // 需要变成 number
+
+    // res = res - 0;  // 偷懒了
+
+    // var jx = 18000;
+
+    // console.log("总工资 ： " + (jx + res));
+
+    // NaN     not a number
+
+    // console.log( "我" - 7 );
+
+    // isNaN
+
+    // 是不是  不是一个一个数字呀？
+
+    // 它不是一个数字 ， 对吗？
+
+    console.log(isNaN(1234589));
+
+    var number = 2;
+
+    var n = number;
+    // 数据类型
+
+    console.log(typeof "abc");
+
+
+
+
+    //           空     未定义
+    console.log(null , undefined);
+
+    // var n = null;
+
+    var a ;
+
+    console.log(a , "----------------------");
+
+    console.log(true , false);
+
+
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+    console.log(02);
+    console.log(0xf);
+    // 引号嵌套  单套双   双套单
+    console.log("我是'一'句话@#￥%……&*（852842");
+    console.log("我是\"一\"句话@#￥%……&*（852842");
+
+
+
+    // 练习
+
+
+    // 2. 定义两个变量，求和
+
+    var num1 = 123;
+    var num2 = 456;
+
+    var sum;
+
+    sum = num1 + num2;
+
+    console.log("加法的结果是："  + sum);
+
+
+    // 3. 交换两个变量的值 （纯数字/非纯数字）
+
+    var myVar1 = "耶斯莫拉";
+
+    var myVar2 = "说啊！";
+
+    console.log(myVar1 , myVar2);
+
+    // ?交换
+
+    var temp;
+
+    temp = myVar1;
+
+    myVar1  = myVar2;
+
+    myVar2 = temp;
+
+    console.log(myVar1 , myVar2);
+
+    // ？ 纯数字 交换 不允许用第三个变量
+
+
+
+
+
+
+    // 变量  哇
+    // var 变量名 = 值;   初始化
+
+    // var number = 666;
+
+    var number;
+    // i am a max number
+    // 大驼峰 小驼峰
+    // var IAmAMaxNumber
+
+    // ..... ...... 
+
+    number = 12345;
+
+    console.log(number);
+
+    var 我  = "漂亮";
+
+    console.log(我);
+
+
+
+    // 注释
+    
+    /*多行
+    注释*/
+
+    // 输出语句
+
+    // alert("我被弹出了，我是只有一个确定按钮的弹出框");
+    // confirm("有确定 和 取消 两个按钮");
+    // prompt("有确定 ，取消 和 输入框  。。")
+
+
+    // document.write("我在document中写了一句话");
+    // console.log("我是一个log输出");
+    // // console.err("我真的错了  没这个方法");
+    // console.warn("我是一个警告");
+    // console.error("我是一个错误")
+  </script>
+</body>
+</html>

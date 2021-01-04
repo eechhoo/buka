@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //正则
+
+
+        var regexp  = /(^0\d{2}-\d{8}$)|(^0\d{3}-\d{7}$)/;
+
+        var demo    = /^0\d{2}-\d{8}$|^0\d{3}-\d{7}$/;
+
+        // Unicode 编码
+        var reg = /^[\u4e00-\u9fa5]{2,4}$/;
+        //qq
+        var re = /^[1-9]{6,10}$/;
+
+        
+        console.log(demo.test('010-12345678'));
+        console.log(demo.test('0451-1234567'));
+        console.log(reg.test('我和你'));
+
+        console.log("abcd".replace("bc","★"));
+
+
+        function trim(str) {
+
+            //  替换
+            return str.replace(/（^\s+）|（\s+$）/g,"");  // 去掉前面和后面的空格
+
+        }
+    </script>
+</body>
+</html>

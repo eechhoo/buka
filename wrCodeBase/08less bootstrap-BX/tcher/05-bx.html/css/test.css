@@ -1,0 +1,27 @@
+/* 编译 */
+/*变漂亮  变量*/
+.box {
+  width: 400px;
+  background-color: #0000ff;
+}
+.box2 {
+  font-size: 30px;
+  width: 400px;
+  background-color: #0000ff;
+}
+.f {
+  background-color: #fff;
+  font-size: 20rem;
+}
+.f .s {
+  background-color: #ffffff;
+}
+.f .s p {
+  background-color: #ffffff;
+}
+.f .s p span {
+  background-color: #ffffff;
+}
+.f .s p span a {
+  background-color: #ffffff;
+}

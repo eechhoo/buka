@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    html,body{
+        height:3000px;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: absolute;
+        top: 0;left: 0;
+    }
+</style>
+<body>
+    
+    <div class="box"></div>
+
+
+    <script>
+        // 事件对象
+
+        var box = document.getElementsByClassName("box")[0];
+        console.log(box);
+
+        box.onclick = function(ev){
+
+            ev = ev || window.event;
+
+            // 保存了这次事件相关的所有数据
+            // console.log(ev);
+
+            //target 真实事件源 (冒泡)
+
+            // console.log(ev.target);
+
+
+            console.log(ev.clientX);
+            console.log(ev.clientY);
+
+            console.log(ev.screenX);
+            console.log(ev.screenY);
+
+            console.log(ev.pageX);
+            console.log(ev.pageY);
+
+
+            //前提  pageX 和 pageY 兼容性不好, 不能直接用时 : 获取鼠标位置  兼容性写法
+
+            // 看得见 + 看不见
+
+            pageX = event.clientX + scroll().left
+            pageY = event.clientY+scroll().top
+        }
+    </script>
+</body>
+</html>

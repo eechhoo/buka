@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        animation: box-move 1.5s linear infinite alternate-reverse;
+        position: absolute;
+    }
+
+    @keyframes box-move {
+        25%{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            left: 0;
+            top:50px;
+        }
+        60%{
+            width: 500px;
+            height: 20px;
+            background-color: green;
+            left: 400px;
+            top:240px;
+        }
+        
+        100%{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            left: 200px;
+            top:40px;
+        }
+    }
+</style>
+<body>
+    
+
+    <div class="box"></div>
+</body>
+</html>

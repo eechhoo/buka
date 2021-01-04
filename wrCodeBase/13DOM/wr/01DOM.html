@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="box" id="box"> box</div>
+
+    <script>
+        // DOM document objecet module   在Js语言环境中获取和控制HTML元素
+
+        // 获取元素
+        // 1.
+        var box = document.getElementsByTagName("div")[0];
+        console.log(box);
+        
+        // 2.
+        var box = document.getElementsByClassName("box")[0];
+        console.log(box);
+
+        // 3.
+        var box = document.getElementById("box");
+        console.log(box);
+
+        // 获取元素之后，给元素添加事件
+        // 1.在HTML上添加事件
+
+        // 2.通过Js绑定事件
+        box.onclick = function(){
+            console.log("通过Js绑定事件");
+        }
+
+
+        // 可以做一切  ，控制样式
+        console.log(box.style);
+
+
+        // 节点关系的获得  
+        // 1.父节点
+        var a = box.parentNode;
+        console.log(a);
+
+        // 2.兄弟节点
+        // var s = box.nextSibling;
+
+        var s = box.nextElementSibling || nextSibling      //第一个是获取兄弟节点（下一个标签）  第二个获取的兄弟节点包括文本和换行
+        var ps = box.previousElementSibling || previousSibling
+
+    // 封装 : 拿所有的兄弟
+    var box = document.getElementById("box");
+    console.log("box:" , box);
+    var res = getAllSibling(box);
+
+    console.log("res:" , res);
+
+    function getAllSibling (ele){
+        var p = ele.parentNode;
+        var childs = p.children;//包括他自己
+        var siblings = [];
+
+        for(var i = 0 ; i< childs.length ; i++){
+            //childs[i]
+
+            if(childs[i] === ele){
+                continue;
+            }
+
+            //将兄弟们保存至新数组
+            siblings.push(childs[i]);
+        }
+
+        return siblings;
+    }
+
+
+
+
+        // 3.子节点
+
+        var fc = box.firstElementChild || firstChild
+        var lc = box.lastElementChild || lastChild 
+        // 所有孩子
+        var childs = box.childNodes;       //所有类型的孩子
+
+        // 判断nodeType=1  是  xxx   推荐使用此方法
+        for( var i = 0 ; i< childs[i] ; i++){
+            if(childs[i].nodeType == 1){
+                console.log(childs[i]);
+            }
+        }
+
+         //简单但不推荐
+        var childs = f.children;        
+        console.log(childs);
+
+
+
+
+
+    </script>
+</body>
+</html>

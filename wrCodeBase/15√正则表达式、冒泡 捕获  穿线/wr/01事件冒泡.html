@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .box1{
+        width: 300px;height: 300px;
+        background-color: pink;
+    }
+
+    .box2{
+        width: 200px;height: 200px;
+        background-color: blue;
+    }
+    .box3{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+</style>
+<body>
+
+    <script>
+
+        window.onload = function(){
+
+        var box1 = document.getElementsByClassName("box1")[0];
+        var box2 = document.getElementsByClassName("box2")[0];
+        var box3 = document.getElementsByClassName("box3")[0];
+
+        console.log(box1 , box2  , box3);
+
+        
+        // // 事件的冒泡
+        // box1.onclick = function(){
+        //     console.log("box111被电击了");
+        // }
+
+        // box2.onclick = function(){
+        //     console.log("box222被电击了");
+        // }
+
+        // box3.onclick = function(){
+        //     console.log("box333被电击了");
+        // }
+
+        // // 阻止box3冒泡
+        // box3.onclick = function(event){
+        //     event = event || window.event
+
+        //     if(event && event.stopPropagation){
+        //         event.stopPropagation();
+        //     }else{
+        //         event.cancelBubble = true;
+        //     }
+        //     console.log("box3被点击了");
+        // }
+
+
+        // //封装阻止冒泡  cB
+        // // 兼容写法
+        // function cB(event){
+        //     if( event  &&  event.stopPropagation ){
+        //         ev.stopPropagation();
+        //     }else{
+        //         event.cancelBubble = true;
+        //     }
+        // }
+
+
+
+
+        // // 捕获
+        // // 指的是 当事件发生 , 你穿过我时 , 把你拦住 , 不给里边
+        // // 有捕获就不冒泡了
+
+        // box1.addEventListener("click",function(){
+        //     console.log("box1111111" );
+        // },true)  //box1捕获
+
+        // box2.addEventListener("click",function(){
+        //     console.log("box222222" );
+        // },true)  //box2捕获
+
+        // box3.addEventListener("click",function(){
+        //     console.log("box33333");
+        // })
+
+
+
+
+        // this获取当前触发事件源，是不准确的      ev.targe才是真正的事件源
+        box1.addEventListener("click",function(ev){
+            console.log("box1111111" ,this,ev.target);
+        },) 
+
+        box2.addEventListener("click",function(ev){
+            console.log("box222222" ,this,ev.target);
+        },) 
+
+        box3.addEventListener("click",function(ev){
+            console.log("box33333",this,ev.target);
+        },)
+
+
+
+
+        }
+
+
+
+    </script>
+
+
+    <div class="box1">111
+        <div class="box2">222
+            <div class="box3">333</div>
+        </div>
+    </div>
+    
+</body>
+</html>

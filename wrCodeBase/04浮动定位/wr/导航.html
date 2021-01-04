@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li,ul{
+        padding: 0px;margin: 0px;
+    }
+    .box{
+        width: 760px;
+    }
+    .banner{
+        width: 760px; height: 150px; background: url(img/banner.jpg) no-repeat 0 0 ;
+    }
+     div ul {
+        height: 32px;background: url(img/nav_bg.jpg) ;list-style-type: none;
+    }
+    div li{
+        height: 32px;width: 80px; background: url(img/button1.jpg) repeat-x; float: left;
+    }
+    a{
+        display: block; height: 32px; width: 80px; line-height: 32px; text-align: center;
+    }
+    a:hover{
+        background: url(img/button2.jpg);
+    }
+
+    
+    .clearfix::before,
+    .clearfix::after {
+        display: block;
+        content: "";
+        height: 0;
+        line-height: 0;
+        visibility: hidden;/*隐藏*/
+        clear: both;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="banner"> </div>
+        <ul class="">
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+        </ul>
+    </div>
+</body>
+</html>

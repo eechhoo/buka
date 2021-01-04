@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  通过  this  关键字  简化 工厂模式
+        // this 在函数内部代表  当前函数的实例化对象
+        // 构造函数 就是用来 new 的
+        // 别人看到你的function名字 首字母大写,下意识会反应说他是一个构造函数 , 用来new创建对象
+        // 约定俗成
+        function CreateP(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        // 怎样产出对象?    new  关键字
+
+        var ps1 = new CreateP("张三",23);
+        var ps2 = new CreateP("李四",24);
+
+        console.log(ps1,ps2);
+
+
+
+        //工厂
+        function create(name,sex,color){
+            var obj = new Object();
+            obj.name = name;
+            obj.sex= sex;
+            obj.color  = color;
+            return obj;
+        }
+
+
+        var   p1 = create('jack',"男","白")
+        var   p2 = create('rose',"女","黑")
+
+        console.log(p1,p2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //创建  
+
+        //字面量 
+
+        // var obj = {  键值对  名:值 , 名:值 };
+
+        var  obj = {
+            name:"jack", // 理解成了 这个对象的属性
+            age:16,
+            gender:"男",
+            speak: function(){
+                console.log("hellow  world");
+            }
+        };
+
+        console.log(obj);
+
+        console.log(obj["name"]);
+        console.log(obj.gender); // .后面是属性名
+
+        // 对象遍历
+
+        for( var key  in  obj ){
+            // console.log(key);
+            console.log(key + ":" + obj[key]);
+        }
+
+
+        obj.speak()
+
+
+        var obj2 = new Object();
+
+        console.log(obj2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    </script>
+</body>
+</html>

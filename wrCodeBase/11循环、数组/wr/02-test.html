@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //99
+
+        for(var i = 1 ; i<10 ; i++){   //行
+            for(var j = 1 ; j<=i ; j++){
+                // 行数 *  列数
+                // 用0 补位
+                document.write(i + " x "  + j + "=" + (i*j<10 ? "0"+(i*j) : (i*j)) + "&nbsp;&nbsp;&nbsp;&nbsp;" );
+            }
+            document.write("<br>")
+        }
+
+        // 直角三角形
+        // 10行,是第几行就有几个*
+
+        // for(var i = 1 ; i<=10 ; i++){//1 - 10   行数
+        //     // document.write(i + "*" + "<br>");
+        //     for(var j = 1 ; j<=i ; j++){    // 每行内的*
+        //         document.write("*");
+        //     }
+        //     document.write("<br>")
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+
+    // 创建函数的方法
+
+        var fn = new Function("alert(666)");
+
+        fn();
+
+        // 匿名函数
+
+        var fn2 = function(){
+            console.log("我是 fn2");
+        }
+
+        // fn2();
+
+        // 匿名函数自调用
+        // 函数的名字 , 代表整个函数体代码
+
+        console.log("fn2",fn2);
+
+
+        (function(){
+            console.log("我是一个没有名字的函数");
+        })()
+
+
+
+
+
+
+
+
+
+
+
+
+
+//求和
+        // var inputarr = prompt("请输入数字：");
+        // var arr = inputarr.split(",");
+        // function getSum(arr){
+        // // inputarr = prompt("请输入数字：");
+        // // arr = inputarr.split(",");
+        //      sum = 0;
+        //     for(var i = 0 ; i < arr.length ; i++)
+        //     sum +=  Number(arr[i]);
+        //     console.log(sum);
+        //     alert(sum);
+        // }
+        // getSum([1,2,3]);
+        // console.log(arr);
+        // console.log(sum);
+
+
+
+
+//          function fn() {
+//             a = 100;
+//             var b = 200;
+//         }
+//         fn(80);
+//         console.log(a);
+//         console.log(b);
+
+
+
+ 
+
+
+
+//冒泡排序
+
+// var arr = [ 5,4,3,2,1 ];
+// var count = 0;
+
+// function sort(){
+//         for(var i = 0 ; i < arr.length - 1 ; i++){
+//             // 相邻两个作比较
+//             for(var j = 0 ; j < arr.length -i;j++){
+//                 count++;
+//                 // arr[j]
+//                 if(arr[j] > arr[j+1]){
+//                     //交换
+//                     var temp = arr[j];
+//                     arr[j] = arr[j+1];
+//                     arr[j+1] = temp;
+//                 }
+//                 console.log(arr);
+//             }
+//         }
+// }
+// sort();
+
+
+
+// ☞ 求圆的面积   PI * r * r   
+
+// var r = 1;
+// function area(){
+//     area = Math.PI * r * r;
+//     console.log(area);
+// }
+// area();
+
+
+
+
+// ☞ 求 n 到 m 之间的数字之和
+
+// function getSum(n,m){
+// // console.log("arguments:" , arguments); //arguments 记录没有被使用的数据
+// var sum = 0;
+// for(var i = n ; i<= m ; i++){
+//     sum += i;
+// }
+// return sum;
+// }
+
+// console.log(getSum(1,5,6,7,8,9));
+
+
+// ☞ 求3个数中的最大值  
+
+//     console.log(  Math.max(1,2,9)  );
+
+// var a = [1,2,6]; 
+// var max = a[0];  //最大值
+// var address = 0; //最大值位置
+// function big(){
+//     for( i = 0 ; i < a.length ; i++)
+//         if(a[i] > max){
+//             max = a[i];
+//         }
+//     address = i ;
+// }
+// big();
+// console.log(max,address);
+
+
+
+// ☞ 判断一个数是奇数还是偶数 
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

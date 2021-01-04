@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+<body>
+
+    <div class="box" id="box"></div>
+    <script>
+
+        // box.onclick = function(){
+        //     // window.location.href = "http://www.bukaedu.com";
+        //     window.close();
+        // }
+
+
+
+        // 属性 方法  
+
+        //浏览器 : 展示信息->属性    功能->方法
+
+        //DOM   document
+        //BOM   window
+
+
+
+        // window.alert();
+        // var num = 666; // window.num = 666;
+        // console.log(window);
+
+        // box.onclick = function(){}
+
+
+        // function fn(){} // window.fn = func()
+
+        // window.open("http://www.baidu.com");
+
+        
+        // console.log(window.location);
+
+        // console.log(o);
+
+        // var o = location.href = "http://www.bukaedu.com";
+
+        // console.log(o);
+
+
+        // var o = window.open("","","height=300px,width=200px");
+        // o.document.write(`
+        //     <style>
+        //         .box{
+        //             width:100px;
+        //             height:100px;
+        //             background-color:red;
+        //         }
+        //     </style>
+        //     <div class="box" id="box" onclick="window.close()">
+            
+        // `);
+        // console.log(o);
+
+        // o.moveTo(500 , 300);
+
+        // history
+        box.onclick = function(){
+            // window.history.back();
+            history.go(-1);
+        }
+
+        // web技术 -->混合式开发场景(app-->web)
+    </script>
+</body>
+</html>

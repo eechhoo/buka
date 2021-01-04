@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a:hover , li:hover {
+            background-color: pink;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        window.onload = function (){
+            var ul = document.getElementsByTagName("ul")[0];
+            var liArr = ul.children;
+            //li绑定事件 ->  动态绑定
+            // for(var i = 0 ; i < liArr.length ; i++){
+            //     //liArr[i]
+            //     liArr[i].addEventListener("click",function(){
+            //         alert(this.innerHTML);
+            //     })
+            // }
+
+            // 事件委托 :
+            // 我的事 我自己不干  你来帮我干   妈妈
+            // 冒泡
+
+            ul.addEventListener("click",function(ev){
+                //  判断真实事件源头
+
+                if(ev.target.tagName === "LI"){
+                    console.log("我 "+ev.target.innerHTML+"  响应了 click事件");
+                }else{
+                    alert("你这个大骗子!!!!");
+                }
+                
+            })
+
+            // ......
+            // 动态创建元素 li  a
+
+            for(var  i = 0 ; i < 5 ; i++){
+                //i   0 - 4
+                var newLi = document.createElement("li");
+                ul.appendChild(newLi);
+                newLi.innerHTML = "我是新来的li" + (i + 1);
+
+                var aLi = document.createElement("a");
+                ul.appendChild(aLi);
+                aLi.innerHTML = "我是土著li" + (i + 1);
+            }
+
+
+
+
+
+        }
+    </script>
+
+    <ul>
+        <li>我是土著li1</li>
+        <li>我是土著li2</li>
+        <li>我是土著li3</li>
+        <li>我是土著li4</li>
+        <li>我是土著li5</li>
+        <li>我是土著li6</li>
+        <li>我是土著li7</li>
+        <li>我是土著li8</li>
+        <li>我是土著li9</li>
+        <li>我是土著li10</li>
+    </ul>
+</body>
+</html>

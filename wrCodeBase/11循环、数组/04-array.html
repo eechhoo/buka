@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 1;
+
+        //数组
+        // 下标 0开始
+
+        // 字面量(你是什么值就长成什么样子)
+        var arr = [1,2,3,4,5,undefined,true];
+        // 创建对象
+        // var array = new Array(5);
+        // var array = new Array(666,777,888);
+
+        // console.log( array);
+
+        arr[7] = "我是7";
+        
+        console.log(arr[7]);
+
+        console.log(arr);
+
+        // 一个一个的都获得---> 遍历数组
+        // 利用循环语句的变量作为下标....
+
+        for(var i = 0 ; i<= 6 ; i++){
+            // i  0 - 6 下标  [i]
+
+            console.log(arr[i]);
+        }
+    </script>
+</body>
+</html>

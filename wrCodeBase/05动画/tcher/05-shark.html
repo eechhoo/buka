@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .shark{
+        height: 270px;
+        width: 509px;
+        background: url(./images/shark1.png);
+        /*steps()*/
+        animation: shark-move 1.5s steps(8)  infinite ;
+        position: absolute;
+        transform: rotateZ(45deg);
+       
+    }
+
+    @keyframes shark-move {
+        from{
+            background-position: 0 0;
+            left: 0;
+            top: 0;
+        }
+        to{
+            background-position: 0 2160px;
+            left: 400px;
+            top: 300px;
+        }
+    }
+
+    .box{
+        width: 200px;
+        height: 200px;
+         /*线性渐变 / 径向渐变*/
+         background:-webkit-linear-gradient(right,red,yellow,green); 
+         background:-moz-linear-gradient(right,red,yellow,green); 
+         background:-o-linear-gradient(right,red,yellow,green); 
+    }
+
+</style>
+<body>
+
+    <div class="shark"></div>
+
+    <div class="box"></div>
+    
+</body>
+</html>

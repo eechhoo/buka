@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box{
+        width: 100%;
+        height: 200px;
+        background-color: pink;
+
+        position: relative;
+    }
+    .con {
+        width: 80%;
+        height: 100%;
+        background-color: blue;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    span{
+        position: absolute;
+        width: 50px;
+        height: 50px; 
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+    <div class="box" style="opacity: 1;">
+        <div class="con">我是一个广告条</div>
+        <span id="close">X</span>
+    </div>
+    
+
+    <script>
+        //5秒关闭广告
+
+        // var close = document.getElementById("close");
+        // console.log(close);
+
+        // close.onclick = function(){
+        //     //广告条消失  :   元素自杀
+        //     var that = this;
+
+        //     // this  当前事件源
+        //     setTimeout(function(){
+        //         that.parentNode.parentNode.removeChild(that.parentNode);
+        //     },5000)
+        // }
+
+        // 关闭广告栏(逐渐消失)
+
+        var close = document.getElementById("close");
+        console.log(close);
+        var timer = null;
+
+        close.onclick = function(){
+            //广告条消失  :   元素自杀
+
+            // this  当前事件源
+
+            //opacity
+            // console.log(this.parentNode.style.opacity);
+
+            timer = setInterval(function(){
+                // 减少opacity
+                close.parentNode.style.opacity -= 0.1;
+                //....
+
+                if(close.parentNode.style.opacity == 0){
+
+                    close.parentNode.parentNode.removeChild(close.parentNode);
+
+                    // 和 return 区别
+                    clearInterval(timer);
+                }
+            },100)
+
+        }
+    </script>
+</body>
+</html>

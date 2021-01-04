@@ -1,0 +1,305 @@
+body{
+    background: #f5f5f5;
+}
+.container{
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 顶部搜索 */
+.search{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+.search .search_box{
+    height: 40px;
+    background: rgba(201, 21,35, .85);
+    min-width: 320px;
+    max-width: 640px; 
+    /* width: 100%; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.search .search_box .icon_logo{
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 60px;
+    height: 36px;
+    background-position: 0 -104px;
+}
+
+
+.search .search_box form {
+    /* width: 100%; */
+    padding: 0 50px 0 70px;
+    /* position: relative; */
+}
+
+.search .search_box form .icon_search{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    background-position: -60px -110px;
+}
+
+.search .search_box form input{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding-left: 40px;
+}
+
+.search .search_box .login{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 50px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+/* 轮播图 */
+.banner{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner ul:first-child{
+    width: 1000%;
+    transform: translateX(-10%);
+}
+
+.banner ul:first-child li{
+    float: left;
+    width: 10%;
+}
+
+/* .banner ul:first-child li a{
+    display: block;
+    width: 100%;
+} */
+
+.banner ul:first-child li a img{
+    display: block;
+    width: 100%;
+}
+
+.banner ul:last-child{
+    position: absolute;
+    height: 6px;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner ul:last-child li{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid white;
+    float: left;
+    margin-left: 10px;
+}
+
+.banner ul:last-child li:first-child{
+    margin-left: 0;
+}
+
+.banner ul:last-child li.now{
+    background: white;
+}
+/* 导航栏 */
+.nav{
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #cccccc;
+}
+
+.nav ul{
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.nav ul li{
+    width: 25%;
+    float: left;
+}
+
+.nav ul li a{
+    display: block;
+    width: 100%;
+}
+
+.nav ul li a img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.nav ul li p{
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 5px 0;
+}
+/* 产品区块 */
+.product{
+    padding: 0 5px;
+}
+/* 产品盒子 */
+.product_box{
+    margin-top: 10px;
+    box-shadow: 0 0 2px #ccc;
+    background: #fff;
+}
+
+.product_box .tit {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product_box .tit .nb {
+    border-bottom: 0 none;
+}
+/* 秒杀 */
+.sk .icon {
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    background: url("../images/seckill-icon.png") no-repeat center/16px 20px;
+}
+
+.sk .name {
+    float: left;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #d8505c;
+}
+
+
+.sk .time {
+    float: left;
+    margin-left: 10px;
+}
+
+.sk .time span {
+    float: left;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    margin-left: 3px;
+    margin-top: 9px;
+}
+
+.sk .time span:nth-child(3n){
+    background: #fff;
+    width: 4px;
+    color: #333;
+}
+
+/*   con */
+
+.sk .pro {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.sk .pro li{
+    width: 33.3333%;
+    float: left;
+}
+
+.sk .pro li a{
+    display: block;
+    border-right: 1px solid #ddd;
+}
+
+
+.sk .pro li:last-child a {
+    border-right: 0 none;
+}
+
+.sk .pro li a img{
+    display: block;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.sk .pro li p{
+    text-align: center;
+}
+
+.sk .pro li .nowPrice{
+    color: #d8505c;
+}
+
+del{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* 产品 */
+.tit h3{
+    border-left: 5px red solid ; 
+    padding-left: 10px;
+}
+
+.bx a:first-child{
+        float: left;
+}
+
+.bx a{
+    display: block;
+    width: 50%;
+    float: right;
+}
+
+.bx a img{
+    border: 2px solid #f5f5f5;
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+.bx2 a{
+display: block;
+width: 50%;
+float: right;
+}
+
+.bx2 a img{
+border: 2px solid white;
+display: block;
+width: 100%;
+}
+
+
+
+

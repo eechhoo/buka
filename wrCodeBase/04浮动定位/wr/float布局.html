@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        background-color: red;
+        width: 500px;
+        height: 400px;
+    }
+    .b-top,
+    .b-bottom {
+        height: 100px;
+        background-color: green;
+    }
+    .bm-left{
+        height: 200px;
+        width: 100px;
+        background-color: orange;
+        float: left;
+    }
+    .bm-center{
+        height: 200px;
+        width: 300px;
+        background-color: blue;
+        float: left;
+    }
+    .bm-right{
+        width: 100px;
+        height: 200px;
+        background-color: yellowgreen;
+        float: right;
+    }
+    .bmc-l{
+        width: 100%;
+        height: 80px;
+        background-color: purple;
+    }
+    .bmc-r{
+        width: 100%;
+        height: 120px;
+        background-color: hotpink;
+    }
+
+     /* 清楚浮动 */
+     .clearfix::before,
+    .clearfix::after {
+        display: block;
+        content: "";
+        height: 0;
+        line-height: 0;
+        visibility: hidden;/*隐藏*/
+        clear: both;
+    }
+
+    .clearfix{
+        zoom:1; /*只有ie认识它*/
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="b-top"></div>
+        <div class="b-middle clearfix">
+            <div class="bm-left"></div>
+            <div class="bm-center">
+                <div class="bmc-l"></div>
+                <div class="bmc-r"></div>
+            </div>
+            <div class="bm-right"></div>
+        </div>
+        <div class="b-bottom"></div>
+    </div>
+</body>
+</html>

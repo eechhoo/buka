@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  /* 注释 p标签 */
+        /* style通常会放在head标签里 */
+        p{
+            font-size: 60px;/* 添加注释 */
+            color: lightblue;
+            background-color: lightcoral;
+            text-align: right;
+        }
+        /* a{} */
+        /*  */
+        /* 选择器 {
+            属性名: 属性值;
+            属性名: 属性值;
+            属性名: 属性值;
+            属性名: 属性值;
+            属性名: 属性值;
+            属性名: 属性值;
+        } */
+    </style>
+    <style>   /* 选择器 */
+        /* 
+            选择器
+            基本选择器
+            标签选择器 {}
+        */
+        /* div 没有自己的样式, 所有的样式都是css写的 */
+        /* 
+            标签选择器->标签名{}
+        */
+        div{
+            border: 1px solid red;
+            color: lightgreen
+        }
+        a{
+            color: #999999;
+        }
+        /* 
+            类选择器 .类名 {}
+            类选择器不被标签调用不生效
+            标签调用:  class="类名"  没有.
+        */
+        .fs{
+            font-size: 24px;
+        }
+
+        /* 
+            id选择器 约定 页面内唯一
+
+        */
+        #header{
+            /* 头部 */
+            height: 40px;
+            background-color: #eeeeee;
+        }
+        /* .fontSize24 */
+        /* 
+        .font-size-24
+        类选择器名 不能用纯数字或数字做开头  .1a  .a1
+        开始命名的时候尽量使用有意义的单词
+        */
+    </style>
+    <style>  <!-- Goole-->
+        span{
+            font-size: 100px;
+        }
+        .color-red{
+            color:red;
+        }
+        .color-blue{
+            color:blue
+        }
+        .color-green{
+            color:green;
+        }
+        .color-yellow{
+            color: yellow;
+        }
+        .font-size-200{
+            font-size: 200px;
+        }
+    </style>
+    <style> /* a伪类 */
+        a:link{
+            /* 开始 */
+            color: black;
+        }
+        a:visited{
+            /* 结束 */
+            color: grey;
+        }
+        
+        a:hover{
+            color: lightcoral;
+            font-size: 60px;
+        }
+        a:active{
+            color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        地址: 
+        绝对路径: 文件在计算机中的绝对位置 盘符:/文件夹.../文件名
+        相对路径: 
+        /  不在第一位代表下一级文件夹 (不要放在最前方)
+        ./ 同级文件夹
+        ../ 上一级文件夹(返回上一级)
+     -->
+    <!-- <img src="D:\testclass\code\img\1.jpg" alt="">
+    <img src="img/2.jpg" alt=""> 
+    <img src="./img/ava/1.jpg" alt="">-->
+    <table border="1" width="300" height="300" align="center"> <!-- 表格练习 -->
+        <!-- border 边界，边框 -->
+        <tr>
+            <td colspan="2">1</td>   <!-- 列合并 -->
+            <td rowspan="2">3</td>   <!-- 行合并 -->
+        </tr>
+        <tr>
+            <td rowspan="2">4</td>
+            <td width="120">
+                <img src="img/1.jpg" alt="" width="100">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">8</td>
+        </tr>
+    </table>
+     <!-- 
+        get 一般用于查询, 删除 
+        post 用于添加修改
+     -->
+       <form action="index.html" method="post">  <!-- 表单  action="把表单的内容交给这个位置的页面"-->
+        用户名: <input type="text" name="username" size="4" maxlength="2">
+        <br>
+        <label for="pwd">密码: </label>  <!-- lable  点字也能选上-->
+        <input type="password" name="password" id="pwd" >
+        <br>
+        性别:
+        <label>
+            <input type="radio" name="gender">男
+        </label>
+        <input type="radio" name="gender">女
+        <input type="radio" name="gender" checked>不知道 <!-- checked 默认选中 -->
+        <br>
+        爱好:
+        <input type="checkbox" name="hobby">抽烟
+        <input type="checkbox" name="hobby" checked>喝酒
+        <input type="checkbox" name="hobby">烫头
+        <input type="checkbox" name="hobby">打麻将
+        <br>
+        头像:
+        <input type="file">
+        <br>
+        学历:
+        <select name="">
+            <option value="">-----</option>
+            <option value="">家本</option>
+            <option value="" selected>幼本</option>
+            <option value="">小本</option>
+        </select>
+        学历：
+        <select name="" multiple>  <!-- multiple 可多选-->
+            <option value="">-----</option>
+            <option value="">家本</option>
+            <option value="" selected>幼本</option>
+            <option value="">小本</option>
+        </select>
+        <br>
+        介绍:
+        <textarea name="" cols="60" rows="5"></textarea>
+        <hr>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <input type="button" value="按钮">
+        <input type="image" src="img/1.jpg">
+
+        <button type="submit">提交按钮</button>
+        <button type="reset">重置按钮</button>
+        <button type="button">按钮按钮</button>
+  
+        username: <input type="text" name="username" placeholder="请输入用户名" autocomplete="off" required accesskey="u" readonly>
+        <!-- readonly 只读, 可以获取值 -->
+        <!-- disabled 不可用, 不可以获取值 -->
+        <br>
+        password: <input type="text" name="password" placeholder="请输入密码" autofocus accesskey="p" disabled>
+        <br>
+        <hr>    
+        <input type="datetime-local">
+        <input type="time">
+        <input type="date">
+        <hr>
+        <input type="range" value="20" max="40" step="10">40
+        <hr>
+        <input type="number" >
+        <hr>    
+        url: <input type="url" disabled>
+        <hr>
+        tel: <input type="tel">
+        <hr>
+        email: <input type="email">
+        <hr>
+        <input type="submit">
+    </form>
+ 
+    <p>文字</p>
+    <p>文字</p>
+    <p style="background-color: lightgreen;">文字</p>
+
+    <header></header>
+    <div id="header">
+        <div class="nav"></div>
+    </div>
+    <div id="banner"></div> <!-- banner 横幅 -->
+    <div id="main"></div>
+    <div id="footer"></div>
+    <div>div标签没样式</div>
+    <div class="fs">div标签没样式</div>
+    <div>div标签没样式</div>
+    <div class="fs">div标签没样式</div>
+    <div>div标签没样式</div>
+    <div style="font-size: 24px;">div标签没样式</div>
+    <a href="12312" class="fs">链接</a>
+    <span>g</span>
+    <span>g</span>
+    <span>g</span>
+    <span>g</span>
+    <div>  <!-- google -->
+        <span class="color-blue font-size-200">G</span>
+        <span class="color-red">o</span>
+        <span class="color-yellow">o</span>
+        <span class="color-blue">g</span>
+        <span class="color-green">l</span>
+        <span class="color-red">e</span>
+    </div>
+    <a href="http://bukaedu.com" target="_blank">布卡</a>
+</body>
+</html>

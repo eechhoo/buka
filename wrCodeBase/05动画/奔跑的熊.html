@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #cccccc;
+    }
+    .bgblack{
+        height: 569px;
+        width: 7680px;
+        background: url(img/bg2.png) repeat-x;
+        /* animation: bgblack 5s linear infinite reverse ; */
+        position:absolute;top:50px;
+    }
+    .bgwhite{
+        height: 336px;
+        width: 7680px;
+        background: url(img/bg1.png) repeat-x;
+        animation: bgblack 4.8s linear infinite reverse ;
+        position:absolute;top:200px;
+    }
+    .bear{
+        width: 200px;height: 100px;
+        background: url(img/bear.png);
+        animation:bear 1.5s steps(8)  infinite;
+        position: absolute; top: 350px;
+        transform:translateX(100px);
+    }
+
+    @keyframes bear{
+		0%{
+			transform: translateX(-600px);
+		}
+		100%{
+			transform: translateX(2000px);
+		}
+	}
+	@keyframes bgblack{
+		0%{
+			transform: translateX(-600px);
+		}
+		100%{
+			transform: translateX(2000px);
+		}
+	}
+    @keyframes bgwhite{
+		0%{
+			transform: translateX(-600px);
+		}
+		100%{
+			transform: translateX(2000px);
+		}
+	}
+    marquee{
+        display: line;
+    }
+</style>
+<body>
+    <!-- <div class="bgblack">
+        <div class="bgwhite"></div>
+    </div>
+    <div class="bear"></div> -->
+    <marquee  behavior="scroll"  scrolldelay="8000000" scrollamount="1000000" > <img src="img/bg1.png" alt=""></marquee>
+    <marquee  behavior="scroll"  scrolldelay="8000000" scrollamount="1000000"> <img src="img/bg1.png" alt=""></marquee>
+
+</body>
+</html>

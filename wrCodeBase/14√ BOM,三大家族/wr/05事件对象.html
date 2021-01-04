@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html , body {
+        width: 2000px;
+        height: 2000px;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        position: absolute;
+        top: 100px; 
+        left: 300px;
+        line-height: 200px;
+    }
+</style>
+<body>
+    <div class="box" id = "box"></div>
+
+
+    <script>
+        // 事件对象
+        
+        var box = document.getElementsByClassName("box")[0];
+        console.log(box);
+
+        // // 获取点击事件信息
+        box.onclick = function(event){
+        //     event = event || window.event;    //兼容性写法
+            console.log(event);
+
+        //     // target 真实事件源（冒泡）
+        //     console.log(event.target);
+
+
+            // 浏览器大小
+            console.log( "距离浏览器" , event.clientX);
+            console.log(event.clientY);
+
+            // 屏幕大小
+            console.log("距离屏幕",event.screenX);
+            console.log(event.screenY);
+
+            // 网页大小
+            console.log("距离网页",event.pageX);
+            console.log(event.pageY);
+
+
+            //前提  pageX 和 pageY 兼容性不好, 不能直接用时 : 获取鼠标位置  兼容性写法
+            // 看得见 + 看不见
+
+            // pageX = event.clientX + scroll().left
+            // pageY = event.clientY+scroll().top
+        }
+
+
+
+
+        // 点击鼠标跟随
+        // 鼠标在盒子中的位置
+        //onmousemove  事件
+
+        box.onmousemove = function(ev){
+
+        ev = ev || window.event;
+        console.log("鼠标在我身上 ");
+
+
+        // clientX - box.left
+
+        var pageX = ev.pageX || ev.clientX + this.offsetLeft;
+
+        var  pageY = ev.pageY || ev.clientY + this.offsetTop;
+
+        var x = pageX - this.offsetLeft
+        var y = pageY - this.offsetTop
+
+        box.innerHTML = `X:`+x+`Y:`+y;
+        }
+
+
+    </script>
+</body>
+</html>
